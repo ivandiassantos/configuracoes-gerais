@@ -25,7 +25,6 @@ security:
 
 spring:
     datasource:
-        data: classpath:/sql/data.sql
         driver-class-name: com.mysql.jdbc.Driver
         password: 'root'
         platform: mysql
