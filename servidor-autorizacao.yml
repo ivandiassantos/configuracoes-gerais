@@ -28,7 +28,7 @@ security:
             userInfoUri: http://localhost:8081/auth/user
 spring:
     datasource:
-        driver-class-name: com.mysql.jdbc.Driver
+        driver-class-name: com.mysql.cj.jdbc.Driver
         password: 'root'
         platform: mysql
         url: jdbc:mysql://localhost:3306/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
