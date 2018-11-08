@@ -1,7 +1,5 @@
 server:
   port: 9092
-  cookie:
-    name: UISESSION
 
 eureka:
   instance:
@@ -16,22 +14,21 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 security:
-    basic:
-      enabled: false
     oauth2:
         client:
-            clientId: SampleClientId
-            clientSecret: secret
-            caccessTokenUri: http://localhost:9092/auth/oauth/token
-            userAuthorizationUri: http://localhost:9092/auth/oauth/authorize
-        resource:
-            userInfoUri: http://localhost:8081/auth/user
+            access-token-validity-seconds: 1800
+            authorized-grant-types: password,refresh_token
+            client-id: coderef
+            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
+            resource-ids: resources
+            scope: read,write
+
 spring:
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
+        driver-class-name: com.mysql.jdbc.Driver
         password: 'root'
         platform: mysql
-        url: jdbc:mysql://localhost:3306/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQLDialect
