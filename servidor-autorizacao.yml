@@ -28,7 +28,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: 'root'
         platform: mysql
-        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQLDialect
