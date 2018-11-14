@@ -25,13 +25,14 @@ security:
 
 spring:
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 'root'
-        platform: mysql
-        url: jdbc:mysql://localhost:3306/oauth?useTimezone=true&serverTimezone=UTC
-        username: root
+        data: classpath:/sql/script.sql
+        driver-class-name: org.h2.Driver
+        platform: h2
+        url: jdbc:h2:file:~/ipbdb
+        username: sa
+        password:
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
+        database-platform: org.hibernate.dialect.H2Dialect
         generate-ddl: false
         hibernate:
             ddl-auto: none
