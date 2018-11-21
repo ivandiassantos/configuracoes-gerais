@@ -21,6 +21,7 @@ security:
             client-id: ekklesia
             client-secret: ekklesia-client
             resource-ids: resources
+            grant_type: password
             scope: read,write
 
 spring:
