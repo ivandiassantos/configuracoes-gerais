@@ -18,7 +18,7 @@ spring:
         driver-class-name: org.h2.Driver
         password: 
         platform: org.hibernate.dialect.H2Dialect
-        url: jdbc:dbc:h2:file:~/cadastro-membro
+        url: jdbc:h2:file:~/cadastro-membro
         username: sa
     jpa:
         database-platform: org.hibernate.dialect.H2Dialect
