@@ -27,14 +27,14 @@ security:
 spring:
     datasource:
         data: classpath:/sql/data.sql
-        driver-class-name: org.h2.Driver
+        driver-class-name: org.postgresql.Driver
         platform: h2
-        url: jdbc:h2:file:~/ipbdb
-        username: sa
-        password:
+        url: postgres://obyxmfxxnqdfhx:0f831a79056f06183406599f7b2b20cacd68f2096a0eb625bb4fe0ad42a21aa4@ec2-54-235-240-126.compute-1.amazonaws.com:5432/d7i1e63qsvllle
+        username: obyxmfxxnqdfhx
+        password:0f831a79056f06183406599f7b2b20cacd68f2096a0eb625bb4fe0ad42a21aa4
         schema: classpath:/sql/schema.sql
     jpa:
-        database-platform: org.hibernate.dialect.H2Dialect
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
         hibernate:
             ddl-auto: none
