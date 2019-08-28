@@ -29,7 +29,7 @@ spring:
         data: classpath:/sql/data.sql
         driver-class-name: org.postgresql.Driver
         platform: h2
-        url: postgres://obyxmfxxnqdfhx:0f831a79056f06183406599f7b2b20cacd68f2096a0eb625bb4fe0ad42a21aa4@ec2-54-235-240-126.compute-1.amazonaws.com:5432/d7i1e63qsvllle
+        url: jdbc:postgresql://obyxmfxxnqdfhx:0f831a79056f06183406599f7b2b20cacd68f2096a0eb625bb4fe0ad42a21aa4@ec2-54-235-240-126.compute-1.amazonaws.com:5432/d7i1e63qsvllle
         username: obyxmfxxnqdfhx
         password: 0f831a79056f06183406599f7b2b20cacd68f2096a0eb625bb4fe0ad42a21aa4
         schema: classpath:/sql/schema.sql
